@@ -4,9 +4,9 @@
 
 1、Java特性：
 >###继承：
->使用extends 关键字实现类的继承；
->子类自动拥有了基类（superclass）的所有成员（成员变量和方法）；
->Java只支持单继承，不允许多继承（通过多个接口实现多继承？？？）
+>>使用extends 关键字实现类的继承；
+>>子类自动拥有了基类（superclass）的所有成员（成员变量和方法）；
+>>Java只支持单继承，不允许多继承（通过多个接口实现多继承？？？）
  <pre><code>
   class Father {
       private String name;
@@ -105,6 +105,6 @@
  </tr>               
  </table>
  
-  class 的权限修饰只可以用public 和 default
->>ublic类可以在任意地方被访问
+class 的权限修饰只可以用public 和 default
+>public类可以在任意地方被访问
 >>default类只可以在同一个包内部访问
