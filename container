@@ -1,0 +1,23 @@
+Java Container:
+
+· Collection<interface>  定义存取对象的方法,子接口Set和List定义了存储方式
+  ··  Set<interface> 存储的数据对象没有顺序且不可以重复
+    ··· HashSet 
+  ··  List<interface> 存储的数据对象有顺序可以重复, 有序有索引
+    ··· LinkedList
+    ··· ArrayList
+· Map<interface> 定义存储"key-value 映射对"的方法
+  ·· HashMap
+  
+  
+Interator<interface> 实现Collection接口的容器类都有一个interator方法,用来返回一个实现Interator接口的对象.
+Interator对象称作迭代器,实现对容器内elements的遍历操作.
+
+
+Collections<class> static方法
+··void sort(List)
+··void shuffle（List）
+··void reverse（List）
+··void fill（List， object）
+··void copy（List dest， List src）
+··void binarySearch（List， object）
