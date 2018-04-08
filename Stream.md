@@ -12,8 +12,7 @@
     <td>
       <ul>
         <li>FileReader</li>
-        <li>FileWirter</li>
-      </ul>
+        <li>FileWirter</li>      </ul>
     </td>
     <td>
       <ul>
@@ -65,7 +64,6 @@
 </table>
 
 #处理流类型
-
 <table>
   <tr>
     <td>处理类型</td>
@@ -148,3 +146,33 @@
     <td>PrintSteam</td>
   </tr>
 </table>
+
+#转换流
+> InputStreamReader 和 OutputStreamWriter 用于字节数据到字符数据之间的转换    
+> InputStreamReader 与 InputStream 套接
+> OutputStreamWriter 与 OutputStream 套接    
+> 转换流在构造时可以指定其编码集合 InputStream isr = new InputStreamReader(System.in, "ISO8859_1");
+
+<pre><code>
+import java.io.*;
+
+public class TransformStream {
+  public static void main(String[] args) {
+    InputStreamReader isr = new InputStreamReader(System.in); //创建一个从标准输入设备输入的输入流对象
+    BufferedReader br = new BufferedReader(isr);//isr引用的对象加一层buffer，缓冲流
+    String s = null;
+    try {
+      s = br.readLine();
+      while (s != null) {
+        if (s.equalsIgnoreCase("exit") break;
+        System.out.println(s.toUpperCase());
+        s = br.readLine();
+      }
+      br.close();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+
