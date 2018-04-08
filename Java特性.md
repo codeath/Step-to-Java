@@ -1,4 +1,5 @@
 
+
 #java基础（10）
 
 1、Java特性：
@@ -33,6 +34,7 @@
     ·· 需要重写；
     ·· 父类的引用指向子类的对象。
   
+  <pre><code>
   class Father {
       private String name;
       Father(String name) {
@@ -60,12 +62,13 @@
           f.commonMethod();//Son's object implement.
       }
   }
-  
+  </code></pre>
   · 抽象：
    ·· 用abstract关键字来修饰类时，这个类叫做抽象类；修饰方法时，该方法叫做抽象方法；
    ·· 含有抽象方法的类必须被声明为抽象类，该类被继承时，抽象方法必须被重写；
    ·· 抽象类不能被实例化；
    ·· 抽象方法只需声明，不需实现；
+   <pre><code>
    abstract class AbstractClass {
        private String ivar;
        public abstract void abstractMethod();
@@ -74,12 +77,34 @@
        //AbstractClass a = new AbstractClass();//AbstractClass是抽象的，无法实例化
        public abstract void abstractMethod() {}
    }
+   </code></pre>
 
 2、权限修饰符
-  · private     类内部    
-  · default     类内部    包内部    
-  · protected   类内部    包内部    子类
-  · public      类内部    包内部    子类    任何地方
+<table>
+ <tr> 
+   <td>private</td>     
+   <td>类内部</td>
+ </tr>
+ <tr>
+  <td>default</td>
+  <td>类内部</td>
+  <td>包内部</td>
+ </tr>
+ <tr>
+  <td>protected</td>
+  <td>类内部</td>
+  <td>包内部</td>
+  <td>子类</td>
+ </tr>     
+ <tr>
+  <td>public</td>
+  <td>类内部</td>
+  <td>包内部</td>
+  <td>子类</td>
+  <td>任何地方</td>
+ </tr>               
+ </table>
+ 
   class 的权限修饰只可以用public 和 default
   ·· public类可以在任意地方被访问
   ·· default类只可以在同一个包内部访问
