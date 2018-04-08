@@ -1,18 +1,16 @@
 
-<div>
 #NumberFormat:
->String format(double number);//根据对象模式将number转化为字符串，并返回改字符串对象</p>
->static NumberFormat getCurrencyInstance();//货币格式格式化；
->static NumberFormat getPercentInstance();//百分比格式化；
+>String format(double number);//根据对象模式将number转化为字符串，并返回改字符串对象    
+>static NumberFormat getCurrencyInstance();//货币格式格式化；    
+>static NumberFormat getPercentInstance();//百分比格式化；    
 
 #DecimalFormat：
->DecimalFormat(String pattern);// 创建一个具有指定模式的对象
->void applyPattern();//为DecimalFormat对象指定新的格式模式；
->String format(double number);// 与NumberFormat一致；
+>DecimalFormat(String pattern);// 创建一个具有指定模式的对象    
+>void applyPattern();//为DecimalFormat对象指定新的格式模式；    
+>String format(double number);// 与NumberFormat一致；    
 <pre><code>
 import java.util.Scanner;
-import java.text.NumberFormat;
-import java.text.DecimalFormat;
+import java.text.*;
 
 public class Purchase {
 	public static void main(String[] args) {
@@ -39,4 +37,3 @@ public class Purchase {
 }
 </code><pre>
 
-</div>
