@@ -46,3 +46,13 @@ public class MapClass {
 	}
 }
 </pre></code>
+
+#泛型Generic
+<pre><code>
+Map<String, String> m = new HashMap<String, String>();
+m.put("key","value");
+String s = new String();
+s = m.get("key"); //s = (String)m.get("key");
+</code></pre>
+
+
