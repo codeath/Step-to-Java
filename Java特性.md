@@ -33,7 +33,7 @@
 >>>有继承关系；           
 >>>需要重写；        
 >>>父类的引用指向子类的对象。
-  
+
   <pre><code>
   class Father {
       private String name;
@@ -58,7 +58,8 @@
   
   public class DynamicBinding {
       public static vodi main(String[] args) {
-          Father f = new Son("son","strong");//System.out.print(f);-->Son@xxxxx;运行时判定为Son对象          f.commonMethod();//Son's object implement.
+          Father f = new Son("son","strong");//System.out.print(f);-->Son@xxxxx;运行时判定为Son对象      
+          f.commonMethod();//Son's object implement.
       }
   }
   </code></pre>
