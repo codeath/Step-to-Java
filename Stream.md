@@ -1,5 +1,6 @@
 #Stream
 
+#节点流类型
 <table>
   <tr>
     <td>类型</td>
@@ -44,9 +45,7 @@
         <li>StringWriter</li>
       </ul>
     </td>
-    <td>
-     --
-    </td>
+    <td></td>
   </tr>
    <tr>
     <td>Pipe</td>
@@ -62,5 +61,90 @@
         <li>PipedOutputStream</li>
       </ul>
     </td>
+  </tr>
+</table>
+
+#处理流类型
+
+<table>
+  <tr>
+    <td>处理类型</td>
+    <td>字符流</td>
+    <td>字节流</td>
+  </tr>
+  <tr>
+    <td>Buffering</td>
+    <td>
+      <ul>
+        <li>BufferedReader</li>
+        <li>BufferedWriter</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>BufferedInputStream</li>
+        <li>BufferedOutputStream</li>
+      </ul>
+    </td>
+  </tr>
+   <tr>
+    <td>Filtering</td>
+    <td>
+      <ul>
+        <li>FilterReader</li>
+        <li>FilterWriter</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>FilterInputStream</li>
+        <li>FilterOutputStream</li>
+      </ul>
+    </td>
+  </tr>
+   <tr>
+    <td>Converting between bytes and character</td>
+    <td>
+      <ul>
+        <li>InputStreamReader</li>
+        <li>OutputStreamWriter</li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>Ojbect Serialization</td>
+    <td> </td>
+    <td>
+      <ul>
+        <li>ObjectInputStream</li>
+        <li>ObjectOutputStream</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Data conversion</td>
+    <td> </td>
+    <td>
+      <ul>
+        <li>DataInputStream</li>
+        <li>DataOutputStream</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Counting</td>
+    <td>LineNumberReader </td>
+    <td>LineNumberInputStream</td>
+  </tr>
+  <tr>
+    <td>Peeking ahead</td>
+    <td>PushbackReader </td>
+    <td>PushbackInputStream</td>
+  </tr>
+  <tr>
+    <td>Printing</td>
+    <td>PrintWriter </td>
+    <td>PrintSteam</td>
   </tr>
 </table>
