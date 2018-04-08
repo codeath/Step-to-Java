@@ -1,12 +1,12 @@
-# Step-to-Java
- step to the Java world...
-Java 基础：(10)
+
+#java基础（10）
 
 1、Java特性：
   · 继承：
     ·· 使用extends 关键字实现类的继承；
     ·· 子类自动拥有了基类（superclass）的所有成员（成员变量和方法）；
     ·· Java只支持单继承，不允许多继承（通过多个接口实现多继承？？？）
+ <pre><code>
   class Father {
       private String name;
       Father(String name) {
@@ -25,6 +25,7 @@ Java 基础：(10)
       }
      this.commonMethod();//直接继承自父类方法：Father's object and subclass's object implement.
   }
+  </code></pre>
     
   · 多态（动态绑定）：程序执行期间判断所引用的对象的实际类型，根据实际类型调用相应的方法。
   · 多态的特征：
