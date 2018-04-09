@@ -189,9 +189,9 @@ public class TransformStream {
 
 #Ojbect流    
 >直接将Object写入写出    
->>transient关键字    
+>transient关键字    
 >>>修饰的成员变量，不予序列化。    
->>serializable接口：        
+>serializable接口：        
 >>>标记化接口，无重写方法；        
 >>>可序列化的。    
 >>externalizable接口            
