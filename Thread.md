@@ -127,3 +127,6 @@ class InterfaceThread implements Runnable {
 		}
 	}
 }
+</code></pre>
+
+#线程同步
