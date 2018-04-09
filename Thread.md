@@ -16,7 +16,7 @@
 >>Thread t = new Thread（tar）；//tar为Runnable接口类型     
 >>Runnable接口只有一个 “public void run();" 方法，用以定义线程运行体；    
 >>使用Runnable接口可以为多个线程提供共享的数据；    
->>在实现Runnable接口的类的run（）；方法体中"public static Thread currentThread();"可以获取当前线程的引用；    
+>>在实现Runnable接口的类的run（）；方法体中"public static Thread currentThread();"可以获取当前executing线程的引用；    
 >
 >extends：    
 >>定义Thread子类 class MyThread extends Thread{public void run(){}};
@@ -73,7 +73,7 @@ class ExtendsThread extends Thread {
 </tr>
 <tr>
 <td>Thread.sleep()</td>
-<td>将当前线程睡眠指定毫秒数</td>
+<td>将当前线程睡眠指定毫秒数/throws InterruptedException</td>
 </tr>
 <tr>
 <td>join()</td>
@@ -92,3 +92,38 @@ class ExtendsThread extends Thread {
 <td>唤醒对象的waitpool中的一个/所有等待线程</td>
 </tr>
 </table>
+
+#sleep()、currentThread()
+<pre><code>
+import java.util.Date;
+
+public class ThreadSleep {
+	public static void main(String[] args) {
+		InterfaceThread it = new InterfaceThread();
+		Thread t = new Thread(it);
+		t.start();
+		System.out.println(Thread.currentThread());//main
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+
+		}
+		t.interrupt();
+	}
+}
+
+class InterfaceThread implements Runnable {
+	public void run() {
+		System.out.println(Thread.currentThread());//Thread-
+		boolean frg = true;
+		while(frg) {
+			System.out.println(new Date());
+			try {
+				Thread.currentThread().sleep(1000);
+			} catch (InterruptedException e) {
+				frg = false;
+				System.out.println(Thread.currentThread() + "has been interrupted");
+			}
+		}
+	}
+}
