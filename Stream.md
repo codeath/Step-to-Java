@@ -112,7 +112,8 @@
   </tr>
    <tr>
     <td>Ojbect Serialization</td>
-    <td> </td>
+
+<td> </td>
     <td>
       <ul>
         <li>ObjectInputStream</li>
@@ -175,4 +176,23 @@ public class TransformStream {
   }
 }
 
+#数据流    
+>DataInputStream 和 DataOutputStream，提供可以存取与机器无关的Java原始类型数据的方法。    
+>属于处理流，分别套接在InputStream 和 OutputStream类型的节点流上    
 
+#Print流    
+>PrintWriter 和PrintStream 输出流，分别针对字符与字节        
+>PrintWriter 和PrintStream提供了重载的print    
+>PrintWriter 和PrintStream 的输出操作不会抛出IOException    
+>PrintWriter和PrintStream有自动flush功能     
+
+#Ojbect流    
+>直接将Object写入写出    
+>>transient关键字    
+>>>修饰的成员变量，不予序列化。    
+>>serializable接口：    
+>>>标记化接口，无重写方法；    
+>>>可序列化的。
+>>externalizable接口    
+>>>readExternal(ObjectInput in);//       
+>>>writeExternal（ObjectOutput out);//按重写的方法序列化object  
