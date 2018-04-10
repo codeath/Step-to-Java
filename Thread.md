@@ -135,8 +135,8 @@ class InterfaceThread implements Runnable {
 	<li>修饰代码块，指定加锁对象，对给定对象加锁，进入同步代码库前要获得给定对象的锁</li>
 </ul>
 <b>synchronized作用于实例方法</b>
-<br>
->实例对象锁就是用synchronzied修饰实例对象中的实例方法，实例方法不包括静态方法    
+***
+ >实例对象锁就是用synchronzied修饰实例对象中的实例方法，实例方法不包括静态方法    
 <pre><code>
 public class AccountingSync implements Runnable {
 	public static int i = 0;
@@ -176,8 +176,14 @@ public class AccountingSync implements Runnable {
 	}
 </code></pre>
   创建两个实例对象，并开启两个线程对共享变量进行操作，得到结果不是期望结果200,0000. 虽然使用了synchronized修饰了increase（）方法，    
-  但是new了两个不同的实例对象，也就是存在两个不同的锁，当线程启动时无法保证对共享变量的依次访问，也就是线程安全无法保证。    
+  但是new了两个不同的实例对象，也就是存在两个不同的锁，当线程启动时无法保证对共享变量的依次访问，也就是线程安全无法保证。   
+  
+<b>synchronized作用于静态方法</b>
+***
+>当synchornized作于静态方法是，锁的就是当前类的class对象。静态成员是类成员不属于任何一个实例对象，因此通过class对象锁可以控制静态    
+成员的并非操作。
   将increase()改为静态方法，synchronized作用的就是当前类对象，只有一个，这样保证锁只有一个。
   <pre><code>public static synchronzied void increase(){ i++; } </code></pre>
-  
-  
+  
+<b>synchronized作用于代码块
+***
