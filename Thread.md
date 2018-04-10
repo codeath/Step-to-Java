@@ -185,5 +185,17 @@ public class AccountingSync implements Runnable {
   将increase()改为静态方法，synchronized作用的就是当前类对象，只有一个，这样保证锁只有一个。
   <pre><code>public static synchronzied void increase(){ i++; } </code></pre>
   
-<b>synchronized作用于代码块
+<b>synchronized作用于代码块</b>
 ***
+>方法体比较大，同时存在比较耗时的操作，而需要同步的资源只在一小块代码中，此时就可以使用同步代码块的方式对需要同步的代码进行包裹。
+<pre><code>
+	public void run() {
+		synchronized (this) {
+			for (int j = 0; j<1000000;j++){
+				i++;
+			}
+		}
+	}
+</code></pre>
+上述代码将synchronized 作用于一个当前实例对象，每次当线程进入synchronized包裹的代码块时，就会要求当前线程持有this对象锁，如果当前有    
+其它线程正持有该对象锁，那新到的线程就必须等待。
