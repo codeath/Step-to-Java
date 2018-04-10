@@ -167,7 +167,7 @@ public class AccountingSync implements Runnable {
   开启两个线程操作同一资源，对实例方法increase()使用synchronized修饰，当前线程的锁便是实例对象instance.    
 当线程t1获取该对象的锁之后，t2无法获取该对象的锁，也就无法访问该对象的synchronized实例方法。
 
-<code>
+<pre><code>
 	public static void main(String[] args) {
 		Thread t1 = new Thread(new AccountingSync());
 		Thread t2 = new Thread(new AccountingSync());
@@ -176,5 +176,5 @@ public class AccountingSync implements Runnable {
 		t2.start();
 		System.out.println(i);
 	}
-</code>
+</code></pre>
 
