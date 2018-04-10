@@ -38,7 +38,7 @@ public class ThreadTest {
 			System.out.println("DefaultThread: " + i);
 		}
 	}
-}
+ }
 
 class InterfaceThread implements Runnable {
 	public void run() {
@@ -136,7 +136,7 @@ class InterfaceThread implements Runnable {
 </ul>
 <b>synchronized作用于实例方法</b>
 ***
- >实例对象锁就是用synchronzied修饰实例对象中的实例方法，实例方法不包括静态方法    
+>实例对象锁就是用synchronzied修饰实例对象中的实例方法，实例方法不包括静态方法    
 <pre><code>
 public class AccountingSync implements Runnable {
 	public static int i = 0;
@@ -181,10 +181,11 @@ public class AccountingSync implements Runnable {
 <b>synchronized作用于静态方法</b>
 ***
 >当synchornized作于静态方法是，锁的就是当前类的class对象。静态成员是类成员不属于任何一个实例对象，因此通过class对象锁可以控制静态    
-成员的并非操作。
+成员的并非操作。   
   将increase()改为静态方法，synchronized作用的就是当前类对象，只有一个，这样保证锁只有一个。
   <pre><code>public static synchronzied void increase(){ i++; } </code></pre>
-  
+
+
 <b>synchronized作用于代码块</b>
 ***
 >方法体比较大，同时存在比较耗时的操作，而需要同步的资源只在一小块代码中，此时就可以使用同步代码块的方式对需要同步的代码进行包裹。
