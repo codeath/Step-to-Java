@@ -114,8 +114,7 @@ public class ThreadSleep {
 
 class InterfaceThread implements Runnable {
 	public void run() {
-		System.out.println(Thread.currentThread());//Thread-
-		boolean frg = true;
+		System.out.println(Thread.currentThread());//Thread-		boolean frg = true;
 		while(frg) {
 			System.out.println(new Date());
 			try {
@@ -157,10 +156,9 @@ public class AccountingSync implements Runnable {
 		AccountingSync instance = new AccountingSync();
 		Thread t1 = new Thread(instance);
 		Thread t2 = new Thread(instance);
-
 		t1.start();
 		t2.start();
-		System.out.println(i);
+		System.out.println(i);//200,0000
 	}
 }
 </code></pre>
@@ -177,4 +175,9 @@ public class AccountingSync implements Runnable {
 		System.out.println(i);
 	}
 </code></pre>
-
+  创建两个实例对象，并开启两个线程对共享变量进行操作，得到结果不是期望结果200,0000. 虽然使用了synchronized修饰了increase（）方法，    
+  但是new了两个不同的实例对象，也就是存在两个不同的锁，当线程启动时无法保证对共享变量的依次访问，也就是线程安全无法保证。    
+  将increase()改为静态方法，synchronized作用的就是当前类对象，只有一个，这样保证锁只有一个。
+  <pre><code>public static synchronzied void increase(){ i++; } </code></pre>
+  
+  
