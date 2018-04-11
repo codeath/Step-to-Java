@@ -12,7 +12,7 @@
                      <td><table>
                         <tr><td>Frame</td></tr>
                         <tr><td>Dialog</td></tr>
-                        <table></td></tr>
+                        </table></td></tr>
                    <tr><td>Panel</td>
                       <td><table>
                          <tr><td>Applet</td></tr>
