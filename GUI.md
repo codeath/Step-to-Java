@@ -1,4 +1,4 @@
-
+ 
 #GUI
 <table>
    <tr>
@@ -59,7 +59,7 @@ AWT提供5种布局管理器类:
 <b>BorderLayout</b>
 <ul>
    <li>Frame类的默认布局管理器 <li>
-   <li>BorderLayout将整个容器布局划分五个区域：AST、WEST、SOUTH、NORTH 、ENTER</li>
+   <li>BorderLayout将整个容器布局划分五个区域：EAST、WEST、SOUTH、NORTH 、ENTER</li>
    <li>不指定组件加入部位，默认加入CENTER区</li>
    <li>每个区域只能加入一个组件，加入多个会覆盖之前加入的组件</li>
 </ul>
