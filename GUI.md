@@ -69,4 +69,45 @@ AWT提供5种布局管理器类:
 
 <b>GridBagLayout</b>    
 
+<pre><code>
+import java.awt.*;
 
+public class ContainerButtons {
+	public static void main(String[] args) {
+
+		Frame f = new Frame("Java Frame");
+		f.setLayout(new GridLayout(2,1));
+		f.setSize(300, 400);
+		Panel p1  = new Panel(new BorderLayout());
+		Button b1 = new Button("b1");
+		Button b2 = new Button("b2");
+		Button b3 = new Button("b3");
+		Button b4 = new Button("b4");
+		p1.add(b1, BorderLayout.WEST);
+		p1.add(b4, BorderLayout.EAST);
+		Panel p11 = new Panel(new GridLayout(2,1));
+		p11.add(b2);
+		p11.add(b3);
+		p1.add(p11, BorderLayout.CENTER);
+
+		Panel p2 = new Panel(new BorderLayout());
+		Panel p3 = new Panel();
+		Button b21 = new Button("b21");
+		Button b22 = new Button("b22");
+
+		p3.setLayout(new GridLayout(2,2));
+		for (int i =0; i<4; i++) {
+			p3.add(new Button("BGL"));
+		}
+
+		p2.add(b21, BorderLayout.WEST);
+		p2.add(p3, BorderLayout.CENTER);
+		p2.add(b22, BorderLayout.EAST);
+
+		f.add(p1, BorderLayout.NORTH);
+		f.add(p2, BorderLayout.SOUTH);
+		f.setVisible(true);
+
+	}
+}
+</code></pre>
