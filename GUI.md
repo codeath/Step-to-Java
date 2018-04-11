@@ -12,7 +12,7 @@
                   <tr><td>Window</td><td>Panel</td></tr>
                </table></td>
          </tr>
-         <tr>Button,TextArea,Lable,List</tr>
+         <tr><td>Button,TextArea,Lable,List</td></tr>
          </table>
         </td>
          
