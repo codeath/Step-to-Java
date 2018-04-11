@@ -3,23 +3,28 @@
 <table>
    <tr>
       <td>Component</td>
-      <td><table>
-         <tr>
-            <td>
-            Container
-            </td>
-            <td><table>
+      <td>
+         <table>
+            <tr>
+               <td>Container</td>
+               <td><table>
                   <tr><td>Window</td>
-                     <td><table><tr><td>Frame</td></tr><tr><td>Dialog</td></tr><table></td></tr>
-                   <tr><td>Panel</td><td><table><tr><td>Applet</td></tr></table></td></tr>
+                     <td><table>
+                        <tr><td>Frame</td></tr>
+                        <tr><td>Dialog</td></tr>
+                        <table></td></tr>
+                   <tr><td>Panel</td>
+                      <td><table>
+                         <tr><td>Applet</td></tr>
+                       </table></td>
+                   </tr>
                </table></td>
-         </tr>
-         <tr><td>Button,TextArea    ,Lable,List...</td></tr>
+            </tr>
+            <tr><td>Button,TextArea    ,Lable,List...</td></tr>
          </table>
-        </td>
-         
-      </tr>
-   </table>
+      </td>    
+    </tr>
+ </table>
 
 
 <b>AWT</b>
