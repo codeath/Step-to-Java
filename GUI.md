@@ -1,4 +1,24 @@
+
 #GUI
+<table>
+   <tr>
+      <td>Component</td>
+      <td><table>
+         <tr>
+            <td>
+            Container
+            </td>
+            <td><table>
+                  <tr><td>Window</td><td>Panel</td></tr>
+               </table></td>
+         </tr>
+         <tr></tr>
+         </table>
+        </td>
+         
+      </tr>
+   </table>
+
 
 <b>AWT</b>
 >AWT(Abstract Window Toolkit)包括了很多类和接口，用于Java Application的GUI（Graphics User Interface）编程    
