@@ -12,7 +12,7 @@
 >Component对象不能独立地显示，必须用Container对象转载才可以显示    
 >Container是Component子类
 >Container对象使用add()添加Component对象      
->Container作为Component子类，也可以添加到其它Container对象中
+>Container作为Component子类，也可以添加到其它Container对象中    
 >常用Container：
 >>Window：顶级窗口   
 >>Panel：其对象可容纳其它Component对象，不能独立存在，必须被添加到其它Container中（window 或Applet）
