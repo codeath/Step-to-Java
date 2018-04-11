@@ -32,14 +32,13 @@ AWT提供5种布局管理器类:
    </ul> 
 <b>BorderLayout</b>    
 <ul>
-<li>Frame类的默认布局管理器 <li>   
-<li>BorderLayout将整个容器布局划分五个区域：AST、WEST、SOUTH、NORTH 、ENTER</li>  
-<li>不指定组件加入部位，默认加入CENTER区</li>    
-<li>每个区域只能加入一个组件，加入多个会覆盖之前加入的组件</li>     
-   </ul>
+   <li>Frame类的默认布局管理器 <li>
+   <li>BorderLayout将整个容器布局划分五个区域：AST、WEST、SOUTH、NORTH 、ENTER</li>
+   <li>不指定组件加入部位，默认加入CENTER区</li>
+   <li>每个区域只能加入一个组件，加入多个会覆盖之前加入的组件</li>
+</ul>
 <b>GridLayout</b> 
-* GridLayout型布局管理将空间划分为规则的矩形网格。从左到右、从上到下
-* GridLayout（3，4）；将内容分为3行4列
+<ul><li>GridLayout型布局管理将空间划分为规则的矩形网格。从左到右、从上到下</li><li>GridLayout（3，4）；将内容分为3行4列</li></ul>
 <b>CardLayout</b>    
 
 <b>GridBagLayout</b>    
