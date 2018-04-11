@@ -23,24 +23,24 @@
 >每个Container 都有一个布局管理器对象，当容器需要对某个组件进行定位或判断其大时，就会调用其对应的布局管理器，调用Container的setLayout方法改变其布局管理器对象
 
 AWT提供5种布局管理器类:    
-FlowLayout
+<b>FlowLayout</b>
 <ul>
 <li>Panel类的默认布局管理器，默认居中</li>        
 <li>对组件逐行定位，从左到右</li>               
 <li>不改变组件大小，按组件原有尺寸显示组件，可设置不同的组件间距、行距、对齐方式</li>    
    </ul> 
-BorderLayout    
-*Frame类的默认布局管理器    
-*BorderLayout将整个容器布局划分五个区域      
+<b>BorderLayout</b>    
+<li>Frame类的默认布局管理器 <li>   
+<li>BorderLayout将整个容器布局划分五个区域   </li>   
 ** EAST
 ** WEST
 ** SOUTH
 ** NORTH 
 ** CENTER    
 *不指定组件加入部位，默认加入CENTER区    
-*每个区域只能加入一个组件，加入多个会覆盖之前加入的组件    
-*GridLayout
-*CardLayout
-*GridBagLayout
+*每个区域只能加入一个组件，加入多个会覆盖之前加入的组件        
+*GridLayout    
+*CardLayout    
+*GridBagLayout    
 
 
